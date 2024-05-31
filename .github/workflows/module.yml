@@ -15,11 +15,38 @@
 
         steps:
 
-         - name: Checkout Repository
-           uses: actions/checkout@v4
+          - name: Checkout Repository
+            uses: actions/checkout@v4
 
-         - name: open terraform folder
-           run: ls ./Terraform-mod
+        #  - name: open terraform folder
+        #    run: ls ./Terraform-mod
 
-        
+          - name: Azure logon
+            uses: azure/login@v2
+            with:
+             creds: ${{ secrets.AZURE_CREDENTIALS }}
+             enable-AzPSSession: true
+
+          - name: Setup Terraform
+            uses: hashicorp/setup-terraform@v3
+
+          - name: Terraform Init
+            id: init
+            run: terraform init
+
+          - name: Terraform fmt
+            id: fmt
+            run: terraform fmt -check
+            continue-on-error: true
+
+          - name: Terraform Validate
+            id: validate
+            run: terraform validate -no-color
+
+          - name: Terraform Plan
+            id: plan
+            run: terraform plan -no-color
+            continue-on-error: true
+
+                    
 
