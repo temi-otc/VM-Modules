@@ -1,5 +1,5 @@
 module "test-vm" {
-  source = "https://github.com/temi-otc/TF-Modules"
+  source = "git::https://github.com/temi-otc/TF-Modules.git"
   rg = var.rg
   vnet-name = var.vnet
   subnet = var.subnet
