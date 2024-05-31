@@ -1,0 +1,25 @@
+   
+   
+   name: module
+   on:
+    push:
+      branches:
+        - main
+
+   jobs:
+     Terraformize:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+             working-directory: ./Terraform-mod
+
+        steps:
+
+         - name: Checkout Repository
+           uses: actions/checkout@v4
+
+         - name: open terraform folder
+           run: ls ./terraform-mod
+           
+        
+
