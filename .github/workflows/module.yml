@@ -19,7 +19,7 @@
            uses: actions/checkout@v4
 
          - name: open terraform folder
-           run: ls ./terraform-mod
+           run: ls ./Terraform-mod
 
         
 
