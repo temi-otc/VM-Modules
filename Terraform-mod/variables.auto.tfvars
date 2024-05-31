@@ -1,0 +1,10 @@
+
+nic = "testvmnic"
+location = "central us"
+subnet = "new-subnet"
+vnet = "module-net"
+vm-name = "module-vm"
+rg = "module-rg"
+ipconf = "vm-config01"
+username = "temi"
+password = "Olanike@1973"
