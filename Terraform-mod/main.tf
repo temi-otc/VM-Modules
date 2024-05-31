@@ -1,5 +1,5 @@
 module "test-vm" {
-  source = "C:/Users/Temidayo/Downloads/vm-modules/modes"
+  source = "https://github.com/temi-otc/TF-Modules"
   rg = var.rg
   vnet-name = var.vnet
   subnet = var.subnet
