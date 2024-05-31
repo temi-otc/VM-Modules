@@ -9,9 +9,9 @@
    jobs:
      Terraformize:
         runs-on: ubuntu-latest
-        # defaults:
-        #     run:
-        #      working-directory: ./Terraform-mod
+        defaults:
+            run:
+             working-directory: ./Terraform-mod
 
         steps:
 
